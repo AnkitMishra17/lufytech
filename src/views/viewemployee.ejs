@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+    
+<div class="mt-5 d-flex justify-content-center">
+    <div class="table-responsive w-50 employee">
+    <table class="table table-hover" id="myTable">
+        <thead>
+          <tr class=" table-secondary">
+            <th scope="col" >Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Contact No.</th>
+            <th scope="col">Age</th>
+            <th scope="col">Address</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+                <% for(let i=0; i< employee.length;i++){ %>
+                    <tr class="table-warning item">
+                      <td><%= employee[i].Name %></td>
+                      <td><%= employee[i].Email %></td>
+                      <td><%= employee[i].Phone %></td>
+                      <td><%= employee[i].Age %></td>
+                      <td><%= employee[i].Address %></td>
+                      <td><i style="font-size: 18px" class="fas fa-marker"></i></td>
+                      <td><a href="/delete/<%= employee[i]._id %>"><i style="font-size: 18px" class="fas fa-user-slash"></i></a></td>
+                    </tr>
+                   <% } %>
+        </tbody>
+      </table>
+    </div>
+    </div>
+<%- include("partials/footer.ejs") %>
