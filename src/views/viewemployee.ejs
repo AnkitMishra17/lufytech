@@ -22,7 +22,7 @@
                       <td><%= employee[i].Phone %></td>
                       <td><%= employee[i].Age %></td>
                       <td><%= employee[i].Address %></td>
-                      <td><i style="font-size: 18px" class="fas fa-marker"></i></td>
+                      <td><a href="/<%= employee[i]._id %>"><i style="font-size: 18px" class="fas fa-marker"></i></a></td>
                       <td><a href="/delete/<%= employee[i]._id %>"><i style="font-size: 18px" class="fas fa-user-slash"></i></a></td>
                     </tr>
                    <% } %>

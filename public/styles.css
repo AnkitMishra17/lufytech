@@ -5,8 +5,8 @@ body{
 }
 form{
     position: absolute;
-    height: 80vh;
-    width: 300px;
+    min-height: 80vh;
+    min-width: 350px;
     padding: 25px;
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     border-radius: 15px;
